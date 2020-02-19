@@ -1,0 +1,13 @@
+{
+    "package_name": "Untitled Project",
+    "project_slug": "{{ cookiecutter.package_name.lower().replace(' ', '-') }}",
+    "package_slug": "{{ cookiecutter.package_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "package_description": "",
+    "author_full_name": "John Doe",
+    "author_email": "john@doe.com",
+    "author_github_username": "johndoe",
+    "license": [
+        "Unlicense",
+        "MIT license"
+    ]
+}
