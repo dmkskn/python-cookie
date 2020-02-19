@@ -33,3 +33,8 @@ def test_project_contains_readme(cookies):
 def test_package_contains_py_typed_marker(cookies):
     result = cookies.bake({"package_name": "foo"})
     assert "py.typed" in [f.basename for f in result.project.join("foo").listdir()]
+
+
+def test_package_contains_setup(cookies):
+    result = cookies.bake()
+    assert "setup.py" in [f.basename for f in result.project.listdir()]
