@@ -23,4 +23,3 @@ setup(
     package_data={"{{cookiecutter.package_slug}}": ["py.typed"]},
     keywords=[],  # TODO
 )
-

@@ -54,6 +54,7 @@ def test_package_contains_makefile(cookies):
     result = cookies.bake()
     assert "Makefile" in [f.basename for f in result.project.listdir()]
 
+
 def test_package_contains_pre_commit_config_yaml(cookies):
     result = cookies.bake()
     assert ".pre-commit-config.yaml" in [f.basename for f in result.project.listdir()]
