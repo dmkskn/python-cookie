@@ -48,3 +48,8 @@ def test_package_contains_requirements_dev(cookies):
 def test_package_contains_coveragerc(cookies):
     result = cookies.bake()
     assert ".coveragerc" in [f.basename for f in result.project.listdir()]
+
+
+def test_package_contains_makefile(cookies):
+    result = cookies.bake()
+    assert "Makefile" in [f.basename for f in result.project.listdir()]
