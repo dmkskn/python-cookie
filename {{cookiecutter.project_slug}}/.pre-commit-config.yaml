@@ -1,0 +1,21 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: check-toml
+      - id: debug-statements
+
+  - repo: local
+    hooks:
+      - id: check-format
+        name: check-format
+        stages: [commit]
+        language: system
+        entry: make check-format
+
+      - id: test
+        name: test
+        stages: [commit]
+        language: system
+        entry: make test
