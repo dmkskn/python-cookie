@@ -43,3 +43,8 @@ def test_package_contains_setup(cookies):
 def test_package_contains_requirements_dev(cookies):
     result = cookies.bake()
     assert "requirements_dev.txt" in [f.basename for f in result.project.listdir()]
+
+
+def test_package_contains_coveragerc(cookies):
+    result = cookies.bake()
+    assert ".coveragerc" in [f.basename for f in result.project.listdir()]
